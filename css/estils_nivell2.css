@@ -1,0 +1,237 @@
+/* ---------------------------------------------------- */
+/* General */
+body {
+    background-color: lightyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+div {
+    padding: 20px;
+}
+
+/* ---------------------------------------------------- */
+/* Blocs */
+.bloc {
+    padding: 0;
+    display: flex;
+    margin-bottom: 10px;
+    flex-flow: row nowrap;
+}
+
+#bloc1 {
+    flex-flow: column nowrap;
+}
+
+/* ---------------------------------------------------- */
+/* Linies */
+.linia {
+    display: flex;
+    justify-content: space-between;
+}
+
+#linia1, #linia2 {
+    padding: 0;
+}
+
+#linia3 {
+    background-color: lightgrey;
+    flex-flow: column wrap;
+    flex-basis: 67%;
+    padding: 10px;
+}
+
+#linia4 {
+    background-color: lightgrey;
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+#linia5 {
+    flex-basis: 100%;
+    padding: 0;
+    justify-content: center;
+}
+
+.sublinia {
+    display: flex;
+    padding: 0px;
+    flex-wrap:nowrap;
+}
+
+/* ---------------------------------------------------- */
+/* Elements */
+.element {
+    padding: 20px;
+}
+
+#element1,
+#element2,
+#element3 {
+    flex-basis: 15%;
+    margin: 10px;
+}
+
+#element2 {
+    flex-basis: 60%;
+}
+
+#element4 {
+    background-color: rgb(255, 204, 94);
+    flex-basis: 100%;
+}
+
+#element5,
+#element6,
+#element7,
+#element8 {
+    background-color: lightgray;
+    flex-basis: 50%;
+    margin: 10px;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    border: 1px solid brown;
+}
+
+#element9 {
+    flex-basis: 96%;
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+#element10,
+#element11 {
+    color: white;
+    background-color:saddlebrown;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+/* ---------------------------------------------------- */
+/* Media Queries */
+
+/* Tauletes */
+@media only screen and (max-width:1200px){
+    #bloc2 {
+        flex-flow: column wrap;
+    }
+    #linia1 {
+        text-align: center; 
+    }
+    #linia4 {
+        padding-top: 0;
+    }
+}
+
+/* Mobils */
+@media only screen and (max-width:700px){
+    .element {
+        padding: 10px;
+    }
+    .sublinia, #linia1 {
+        flex-wrap: wrap;
+    }
+    .bloc {
+        flex-wrap: nowrap;
+    }
+    #linia1 {
+        flex-flow: column;
+        align-items: center;       
+    }
+    #element5,
+    #element6,
+    #element7,
+    #element8 {
+        flex-basis: 100%;
+    }
+}
+
+/* ---------------------------------------------------- */
+/* -------------- Afegits al nivell 2 ----------------- */
+/* ---------------------------------------------------- */
+
+/* ---------------------------------------------------- */
+/*Logo*/
+#element1 {
+    padding: 0px;
+    text-align: center;
+}
+#element1 img {
+    height: 60px;
+}
+
+/* ---------------------------------------------------- */
+/*Capçalera*/
+#element4 {
+    height: 300px;
+    background-image: url("/M3/images/capçalera.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+    color: rgb(235, 133, 135);
+    opacity: 0.5;
+    margin: 0 30px;
+}
+
+/* ---------------------------------------------------- */
+/* Menu */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li {
+    margin: 0 10px;
+    color: dimgray;
+}
+li:hover {
+    color: brown;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------- */
+/* Articles */
+article img {
+    object-fit: cover;
+    height: 300px;
+    max-width: 100%;
+}
+article p, #element9 p {
+    margin: 0;
+    padding: 0 15px;
+}
+.data {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: -1.2em;
+    margin-bottom: -1.2em;
+}
+.seccio {
+    background-color: brown;
+    color: lightgrey;
+}
+.resum, .link {
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+article a:hover {
+    color: white;
+}

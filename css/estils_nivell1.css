@@ -1,0 +1,138 @@
+/* ---------------------------------------------------- */
+/* General */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+div {
+    padding: 20px;
+}
+
+/* ---------------------------------------------------- */
+/* Blocs */
+.bloc {
+    border: 10px solid black;
+    padding: 0;
+    display: flex;
+    margin-bottom: 10px;
+    flex-flow: row nowrap;
+}
+
+#bloc1 {
+    flex-flow: column nowrap;
+}
+
+#bloc2 {
+    border: 5px solid black;
+}
+
+/* ---------------------------------------------------- */
+/* Linies */
+.linia {
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid black;
+}
+
+#linia1 {
+    background-color: rgb(39, 57, 78);
+    padding: 10px;
+}
+
+#linia2 {
+    background-color: rgb(240, 118, 58);
+}
+
+#linia3 {
+    background-color: rgb(68, 70, 94);
+    flex-flow: column wrap;
+    flex-basis: 67%;
+    border: 9px solid black;
+    padding: 10px;
+}
+
+#linia4 {
+    background-color: rgb(249, 76, 71);
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 9px solid black;
+    padding: 20px;
+}
+
+#linia5 {
+    background-color: rgb(228, 164, 52);
+    flex-basis: 100%;
+}
+.sublinia {
+    display: flex;
+    padding: 0px;
+}
+/* ---------------------------------------------------- */
+/* Elements */
+#element1,
+#element2,
+#element3 {
+    background-color: rgb(234, 88, 75);
+    flex-basis: 15%;
+    margin: 10px;
+}
+
+#element2 {
+    flex-basis: 60%;
+}
+
+#element4 {
+    background-color: rgb(255, 204, 94);
+    flex-basis: 100%;
+}
+
+#element5,
+#element6,
+#element7,
+#element8 {
+    background-color: rgb(22, 100, 164);
+    flex-basis: 50%;
+    margin: 10px;
+}
+
+#element9 {
+    background-color: rgb(99, 153, 187);
+    flex-basis: 100%;
+    margin: 10px;
+}
+
+#element10,
+#element11 {
+    background-color: rgb(255, 227, 128);
+    margin-bottom: 10px;
+}
+
+/* ---------------------------------------------------- */
+/* Media Queries */
+
+/* Tauletes */
+@media only screen and (max-width:1000px){
+    #bloc2, #linia3, #linia4 {
+        border-color: yellow;
+    }
+    #bloc2 {
+        flex-flow: column nowrap;
+    }
+}
+/* Mobils */
+@media only screen and (max-width:600px){
+    .bloc {
+        border: 20px solid black;
+    }
+    #bloc2, #linia3, #linia4 {
+        border-width: 10px;
+    }
+    .element {
+        padding: 10px;
+    }
+}

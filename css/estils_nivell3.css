@@ -1,0 +1,213 @@
+/* ---------------------------------------------------- */
+/* General */
+body {
+    background-color: lightyellow;
+    justify-content: center;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+/* ---------------------------------------------------- */
+/* Grids */
+#container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "bloc1"
+        "bloc2"
+        "bloc3"
+}
+#bloc1 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "element1 element2 element2 element2 element2 element3"
+        "element4 element4 element4 element4 element4 element4"
+}
+#bloc2 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "subbloc1 subbloc1 subbloc2"
+}
+#subbloc1 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "element5 element6"
+        "element7 element8"
+        "element9 element9"
+}
+
+#bloc3 {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "element12"
+}
+/* ---------------------------------------------------- */
+/* Blocs */
+.bloc {
+    padding: 0;
+    margin-bottom: 10px;
+}
+#bloc2 {
+    background-color: lightgrey;
+}
+#subbloc2 {
+    padding: 10px;
+}
+
+/* ---------------------------------------------------- */
+/* Elements */
+.element {
+    padding: 20px;
+}
+
+#element5,
+#element6,
+#element7,
+#element8 {
+    background-color: lightgray;
+    margin: 10px;
+    padding: 0 0 15px 0;
+    border: 1px solid brown;
+}
+
+#element9 {
+    margin: 10px;
+    padding: 0;
+    text-align: center;
+}
+
+#element10,
+#element11 {
+    color: white;
+    background-color:saddlebrown;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+}
+
+/* ---------------------------------------------------- */
+/*Logo*/
+#element1 {
+    padding: 0px;
+    text-align: center;
+}
+#element1 img {
+    height: 60px;
+}
+
+/* ---------------------------------------------------- */
+/* Menu */
+ul {
+    display: grid;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#element2 ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#element3 ul {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+li {
+    margin: 0 10px;
+    color: dimgray;
+}
+li:hover {
+    color: brown;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------- */
+/*Capçalera*/
+#element4 {
+    height: 300px;
+    background-image: url("/M3/images/capçalera.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+    color: rgb(235, 133, 135);
+    opacity: 0.5;
+}
+
+/* ---------------------------------------------------- */
+/* Articles */
+article img {
+    object-fit:cover;
+    height: 300px;
+    width: 100%;
+}
+article p, #element9 p {
+    margin: 0;
+    padding: 0 15px;
+}
+.data {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: -1.4em;
+    margin-bottom: -1.4em;
+}
+.seccio {
+    background-color: brown;
+    color: lightgrey;
+}
+.resum, .link {
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+article a:hover {
+    color: white;
+}
+
+
+/* ---------------------------------------------------- */
+/* Footer */
+#element12{
+    padding: 0;
+    text-align: center;
+}
+
+/* ---------------------------------------------------- */
+/* Media Queries */
+
+/* Tauletes */
+@media only screen and (max-width:1200px){
+    #bloc2 {
+        grid-template-areas:
+            "subbloc1"
+            "subbloc2"
+    }
+}
+/* Mobils */
+@media only screen and (max-width:700px){
+    #bloc1 {
+        grid-template-areas:
+            "element1"
+            "element2"
+            "element3"
+            "element4"
+    }
+    #subbloc1 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas:
+            "element5"
+            "element6"
+            "element7"
+            "element8"
+            "element9"
+    }
+}
