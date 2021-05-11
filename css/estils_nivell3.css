@@ -38,7 +38,6 @@ body {
         "element7 element8"
         "element9 element9"
 }
-
 #bloc3 {
     display: grid;
     grid-gap: 10px;
@@ -171,7 +170,9 @@ article p, #element9 p {
 article a:hover {
     color: white;
 }
-
+#element2 li br {
+    display: none;
+}
 
 /* ---------------------------------------------------- */
 /* Footer */
@@ -184,15 +185,18 @@ article a:hover {
 /* Media Queries */
 
 /* Tauletes */
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:992px){
     #bloc2 {
         grid-template-areas:
             "subbloc1"
             "subbloc2"
     }
+    #element2 li br {
+        display: block;
+    }
 }
-/* Mobils */
-@media only screen and (max-width:700px){
+/* Mobils horitzontals */
+@media only screen and (max-width:768px){
     #bloc1 {
         grid-template-areas:
             "element1"
@@ -200,6 +204,9 @@ article a:hover {
             "element3"
             "element4"
     }
+}
+/* Mobils verticals */
+@media only screen and (max-width:576px){
     #subbloc1 {
         display: grid;
         grid-gap: 10px;
@@ -209,5 +216,11 @@ article a:hover {
             "element7"
             "element8"
             "element9"
+    }
+    #element2 ul {
+        grid-template-columns: none;
+    }
+    #element2 li br {
+        display: none;
     }
 }
